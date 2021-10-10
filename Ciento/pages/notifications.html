@@ -162,13 +162,114 @@
                                 </div>
                                 <!--end::Title-->
                                 <!--begin::Btn-->
-                                <a href="#" class="btn btn-outline-primary btn-md">
+                                <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-primary btn-md">
                                     <span class="svg-icon-success">
                                         <span class="">Review</span>
                                         
                                     </span>
                                 </a>
                                 <!--end::Btn-->
+                                <!-- Modal-->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog  modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                          
+                                            <h5 class="modal-title" id="exampleModalLabel"><i class="far fa-edit text-primary"></i>&nbsp; Membership</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <i aria-hidden="true" class="ki ki-close"></i>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <form class="form" id="kt_form">
+                                            <!--begin::Row-->
+                                                  <div class="row">
+                                                      <div class="col-xl-2"></div>
+                                                      <div class="col-xl-7 my-2">
+                                                        
+                                                       
+                                                          <!--begin::Group-->
+                                                          <div class="form-group row">
+                                                              <label class="col-form-label col-3 text-lg-right text-left">Name</label>
+                                                              <div class="col-9">
+                                                                  <input class="form-control form-control-lg form-control-solid" type="text" value="Anna" />
+                                                              </div>
+                                                          </div>
+                                                          <!--end::Group-->
+                                                           <!--begin::Group-->
+                                                           <div class="form-group row">
+                                                            <label class="col-form-label col-3 text-lg-right text-left">Price</label>
+                                                            <div class="col-9">
+                                                                <input class="form-control form-control-lg form-control-solid" type="number" value="0" />
+                                                            </div>
+                                                        </div>
+                                                        <!--end::Group-->
+                                                     <!--begin::Group-->
+                                                     <div class="form-group row">
+                                                      <label class="col-form-label col-3 text-lg-right text-left">Description</label>
+                                                      <div class="col-9">
+                                                        <textarea class="form-control form-control-lg form-control-solid" rows="3"></textarea>
+                                                      </div>
+                                                  </div>
+                                                  <!--end::Group-->
+                                                          <!--begin::Group-->
+                                                          <div class="form-group row">
+                                                              <label class="col-form-label col-3 text-lg-right text-left">Background Color</label>
+                                                              <div class="col-9">
+                                                                  <div class="input-group input-group-lg input-group-solid">
+                                                                      <input type="color" class="form-control form-control-lg form-control-solid" value="anna.krox@loop.com" placeholder="Email" />
+                                                                  </div>
+                                                                  <span class="form-text text-muted">We'll never share your email with anyone else.</span>
+                                                              </div>
+                                                          </div>
+                                                          <!--end::Group-->
+                                                         
+                                                          <!--begin::Group-->
+                                                          <div class="form-group row">
+                                                              <label class="col-form-label col-3 text-lg-right text-left">Status</label>
+                                                              <div class="col-9">
+                                                                  <select class="form-control form-control-lg form-control-solid">
+                                                                    <option value="pending" selected="selected">Pending</option>
+                                                                      <option value="active">Active</option>
+                                                                      <option value="inactive">Inactive</option>
+                                                       </select>
+                                                              </div>
+                                                          </div>
+                                                          <!--end::Group-->
+                                                        <!--begin::Group-->
+                                                        <div class="form-group row">
+                                                          <label class="col-form-label col-3 text-lg-right text-left">Logo</label>
+                                                          <div class="col-9">
+                                                              <div class="image-input image-input-empty image-input-outline" id="kt_user_edit_avatar" style="background-image: url(assets/media/users/blank.png)">
+                                                                  <div class="image-input-wrapper"></div>
+                                                                  <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
+                                                                      <i class="fa fa-pen icon-sm text-muted"></i>
+                                                                      <input type="file" name="profile_avatar" accept=".png, .jpg, .jpeg" />
+                                                                      <input type="hidden" name="profile_avatar_remove" />
+                                                                  </label>
+                                                                  <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Cancel avatar">
+                                                                      <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                                                  </span>
+                                                                  <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="Remove avatar">
+                                                                      <i class="ki ki-bold-close icon-xs text-muted"></i>
+                                                                  </span>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                      <!--end::Group-->
+                                                      </div>
+                                                  </div>
+                                                  <!--end::Row-->
+                                            
+                                      </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary font-weight-bold">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
                             </div>
                             <hr>
                             <!--end::Item-->
@@ -324,5 +425,10 @@
 						<!--end::Container-->
 					</div>
 					<!--end::Footer-->
+          <!--begin::Global Theme Bundle(used by all pages)-->
+		<script src="../assets/plugins/global/plugins.bundle.js"></script>
+		<script src="../assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="../assets/js/scripts.bundle.js"></script>
+		<!--end::Global Theme Bundle-->
 </body>
 </html>
