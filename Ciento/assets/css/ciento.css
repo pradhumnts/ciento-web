@@ -10,3 +10,36 @@
   .rounded-big{
       border-radius:20px;
   }
+.logo-img img{
+    width:50px  ;
+    height:50px;
+}
+.ciento-mobile-header{
+    padding: 12% 5%;
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 3px 10px 30px #282f4048;
+}
+.logo-ciento p{
+    font-size:1.3rem;
+    font-weight: 1000;
+    margin-bottom: 0;
+}
+.ciento-settings .notification-bell{
+    position: relative;
+}
+.ciento-settings .notification-dot{
+    width:7px;height: 7px; 
+    background-color:#E6DB1A;
+    padding:5%;
+    z-index: 111;
+    border-radius:50%;
+    position:absolute;
+    top:0px;right:0px;
+}
+.ciento-settings .notification-bell i{
+    font-size:1.8rem;
+    stroke:white;
+}
+.ciento-settings{
+    column-gap:30%;
+}
