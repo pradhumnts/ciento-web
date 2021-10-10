@@ -11,7 +11,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="icon" type="image/png" href="../assets/media/Ciento_R3 yellow.png"/>
+    <link rel="icon" type="image/png" href="../../assets/media/Ciento_R3 yellow.png"/>
 
     <link
       rel="stylesheet"
@@ -21,26 +21,23 @@
 
     <!--begin::Global Theme Styles(used by all pages)-->
     <link
-      href="../assets/plugins/global/plugins.bundle.css"
+      href="../../assets/plugins/global/plugins.bundle.css"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="../assets/plugins/custom/prismjs/prismjs.bundle.css"
+      href="../../assets/plugins/custom/prismjs/prismjs.bundle.css"
       rel="stylesheet"
       type="text/css"
     />
-    <link href="../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <link
-      href="assets/plugins/custom/datatables/datatables.bundle.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="../../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    
     <!-- <script src="assets/js/scripts.bundle.js"></script> -->
-    <link rel="stylesheet" href="../assets/css/ciento.css" />
+    <link rel="stylesheet" href="../../assets/css/ciento.css" />
+    <!--begin::Page Custom Styles(used by this page)-->
+		<link href="../../assets/css/pages/wizard/wizard-4.css" rel="stylesheet" type="text/css" />
+		<!--end::Page Custom Styles-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <!--end::Global Theme Styles-->
   </head>
 
@@ -60,7 +57,7 @@
             <!--begin::Page Title-->
             <div class="d-flex align-items-center">
               <img
-                src="../assets/media/custom/Ciento_R3 yellow.png"
+                src="../../assets/media/custom/Ciento_R3 yellow.png"
                 alt=""
                 class="img-fluid logo mx-5"
               />
@@ -90,7 +87,7 @@
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="../assets/media/custom/Ciento_R3 yellow.png" class="menu-link">
+                    <a href="../../assets/media/custom/Ciento_R3 yellow.png" class="menu-link">
                       <i class="flaticon2-notification menu-text"></i>
                     </a>
                   </li>
@@ -146,23 +143,35 @@
               <!--end::Toolbar-->
           </div>
 
-          
+            
 
+
+
+          
                 <!--begin::Footer-->
         <div class="footer bg-white py-4 d-flex flex-lg-column mt-10" id="kt_footer">
-            <!--begin::Container-->
-            <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-                <!--begin::Copyright-->
-                <div class="text-dark order-2 order-md-1">
-                    <span class="text-muted font-weight-bold mr-2">2021©</span>
-                    <a href="#" target="_blank" class="text-dark-75 text-hover-primary">Ciento</a>
-                </div>
-                <!--end::Copyright-->
-            </div>
-            <!--end::Container-->
-        </div>
-        <!--end::Footer-->
+          <!--begin::Container-->
+          <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+              <!--begin::Copyright-->
+              <div class="text-dark order-2 order-md-1">
+                  <span class="text-muted font-weight-bold mr-2">2021©</span>
+                  <a href="#" target="_blank" class="text-dark-75 text-hover-primary">Ciento</a>
+              </div>
+              <!--end::Copyright-->
+          </div>
+          <!--end::Container-->
+      </div>
+      <!--end::Footer-->
 
-
-    </body>
-    </html>
+      <script src="../assets/plugins/global/plugins.bundle.js"></script>
+      <script src="../assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+      <script src="../assets/js/scripts.bundle.js"></script>
+  
+      <!--begin::Page Vendors(used by this page)-->
+      <script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+      <!--end::Page Vendors-->
+      <!--begin::Page Scripts(used by this page)-->
+      <script src="../assets/js/pages/crud/datatables/advanced/column-rendering.js"></script>
+  
+  </body>
+  </html>
