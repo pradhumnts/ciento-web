@@ -11,8 +11,8 @@
       border-radius:20px;
   }
 .logo-img img{
-    width:50px  ;
-    height:50px;
+    width:35px  ;
+    height:35px;
 }
 .ciento-mobile-header{
     padding: 12% 5%;
@@ -21,7 +21,7 @@
 }
 .logo-ciento p{
     font-size:1.3rem;
-    font-weight: 1000;
+    font-weight: 1000 !important;
     margin-bottom: 0;
 }
 .ciento-settings .notification-bell{
@@ -42,4 +42,68 @@
 }
 .ciento-settings{
     column-gap:30%;
+}
+.navigation-bottom-mobile{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    z-index: 1111;
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 2rem 2rem 0px 0px;
+    box-shadow: 3px 10px 30px #282f4048;
+}
+.navigation-bottom-mobile .nav-item a{  
+    display:flex;
+    justify-content:center;
+    font-size:1.2em;
+    border-radius:20px !important;
+}
+.navigation-bottom-mobile .nav-item .active{
+    background-color: white !important;
+    z-index: 111;
+    color: #282F40 !important;
+}
+body{
+    position:relative;
+}
+.top-section{
+    border-radius: 0px 0px 2rem 2rem;
+    box-shadow: 3px 10px 30px #cdcdcd48;
+}
+.navigation-secondary{
+    display:grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 15% 70% 15%;
+    align-items:center;
+    justify-content: center;
+}
+.navigation-secondary i{
+     color: #282F40 !important;
+}
+.navigation-secondary .member-settings{
+    column-gap:2rem;
+    font-size:1.4rem;
+}
+.membership-card{
+    row-gap:20px;
+}
+.top-section h1, h2, h3{
+    font-weight: 600 !important;
+    color:#282F40;
+}
+.s{
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+body{
+    background-color: #F6F6F6
+}
+.rounded-section{
+    border-radius: 2rem;
+    box-shadow: -3px -10px 30px #cdcdcd48;
+}
+.qr{
+    
 }
