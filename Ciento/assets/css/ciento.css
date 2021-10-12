@@ -121,6 +121,10 @@ body{
     height:100vh;
     width:100%;
 }
+.main-list{
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
 .qr-svg{
     z-index: 1;
     position:absolute;
@@ -129,3 +133,47 @@ body{
     height:100vh;
     width:100vw;
 }
+.qr-code .overlay-content{
+    z-index: 2;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.qr-code .timer{
+    margin-top:120%;
+}
+.qr-code h3{
+    margin-bottom:120%;
+}
+
+.loading-wrapper{
+    background-color: #F6F6F6;
+    width:100vw;
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+  
+  #loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(63, 63, 63, 0.3);
+    border-radius: 50%;
+    border-top-color: black;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+

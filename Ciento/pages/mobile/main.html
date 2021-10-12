@@ -45,6 +45,9 @@
   </head>
 
   <body id="kt_body" class="page-loading">
+    <!-- <div class="loading-wrapper">
+        <div id="loading"></div>
+    </div> -->
       <div class="header-mobile bg-primary ciento-mobile-header mb-5">
           <div class="logo-ciento d-flex align-items-center">
               <div class="logo-img">
@@ -75,7 +78,7 @@
              <div class="tab-pane fade show active" id="kt_tab_pane_7_1" role="tabpanel" aria-labelledby="kt_tab_pane_7_1">
                 <div class="container">
                     <!--begin::List Widget 1-->
-                    <div class="card overflow-auto card-custom card-stretch gutter-b rounded-big" style="height:75vh">
+                    <div class="card main-list card-custom card-stretch gutter-b rounded-big" style="height:75vh">
                      
                       <!--begin::Body-->
                       <div class="card-body pt-8 p-4">
@@ -275,7 +278,7 @@
                       <!--begin::Body-->
                       <div class="card-body pt-8 p-4">
                           <!--begin::Item-->
-                          <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                          <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                               <!--begin::Symbol-->
                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -293,7 +296,7 @@
                           <hr>
                           <!--end::Item-->
                           <!--begin::Item-->
-                          <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                          <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                               <!--begin::Symbol-->
                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -311,7 +314,7 @@
                           <hr>
                           <!--end::Item-->
                           <!--begin::Item-->
-                          <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                          <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                               <!--begin::Symbol-->
                                       <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                           <div class="symbol-label">
@@ -329,7 +332,7 @@
                           <hr>
                           <!--end::Item-->
                           <!--begin::Item-->
-                          <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                          <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                                <!--begin::Symbol-->
                                <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -347,7 +350,7 @@
                           <hr>
                           <!--end::Item-->
                           <!--begin::Item-->
-                          <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                          <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                                <!--begin::Symbol-->
                                <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -365,7 +368,7 @@
                           <hr>
                           <!--end::Item-->
                            <!--begin::Item-->
-                           <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html" >
+                           <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html" >
                               <!--begin::Symbol-->
                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -383,7 +386,7 @@
                           <hr>
                           <!--end::Item-->
                           <!--begin::Item-->
-                            <div class="d-flex align-items-center affiliate-link" data-location="./affiliate.html">
+                            <div class="d-flex align-items-center affiliate-link" data-location="./qr-scan.html">
                               <!--begin::Symbol-->
                               <a href="./affiliate.html" class="symbol symbol-50 mr-3">
                                   <div class="symbol-label">
@@ -435,7 +438,11 @@
                 $(".membership-link").click(function(){
                     window.location = $(".membership-link").data("location")
                 });
+                $(window).on('load', function() {
+                  $('.loading-wrapper').fadeOut('slow');
+              })
             });
+ 
        </script>
     		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="../../assets/plugins/global/plugins.bundle.js"></script>

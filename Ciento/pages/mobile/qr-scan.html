@@ -40,25 +40,38 @@
     <link rel="stylesheet" href="../../assets/js/instascan.min.js" />
   </head>
   <body id="kt_body" class="page-loading">
-
+    <!-- <div class="loading-wrapper">
+      <div id="loading"></div>
+  </div> -->
         <div class="qr-code d-flex justify-content-center flex-column align-items-center h-100 position-relative">  
             <div class="qr-wrapper pt-0">
               <video id="preview" class="qr-scanner w-100"></video>
             </div>
-            
-        <div class="timer d-flex align-items-center justify-content-center position-absolute">
+        <div class="overlay-content d-flex justify-content-center align-items-center h-100 w-100">
+        <h3 class="w-75 text-white text-center">Align the QR code within the frame to scan</h3>
+        <div class="timer position-absolute">
+          <div class="d-flex align-items-center justify-content-center">
             <i class="far fa-clock font-size-h3 text-white"></i>
             <p class="font-size-h3 mb-0 ml-3 text-white" id="qr-timer"></p>
+          </div>
+          <a href="#" onclick="window.history.back()"><button class="btn btn-light font-weight-bold text-primary my-10 opacity-50">Cancel Scanning</button></a>
         </div>
-        
-          <svg class="qr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.998 926.003">
+        </div> 
+        <img src="../../assets/media/QR/qr-overlay.png" class="qr-svg" alt="">
+          <!-- <svg class="qr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.998 926.003">
             <path id="Subtraction_1" data-name="Subtraction 1" d="M-19177,1789h-428l0-926h428v926h0v0Zm-349-644a20.02,20.02,0,0,0-19.994,20v271a20.02,20.02,0,0,0,19.994,20h271a20.024,20.024,0,0,0,20-20V1165a20.024,20.024,0,0,0-20-20Z" transform="translate(19605 -862.999)" opacity="0.66"/>
-          </svg>
-     
+          </svg> -->
+          
       </div>
      
       
     <script type="text/javascript">
+      // $(document).ready(function(){
+             
+      //           $(window).on('load', function() {
+      //             $('.loading-wrapper').fadeOut('slow');
+      //         })
+      //       });
       var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: true });
       scanner.addListener('scan',function(content){
         alert(content);
@@ -96,7 +109,7 @@
       var downloadTimer = setInterval(function(){
         if(timeleft <= 0){
           clearInterval(downloadTimer);
-          document.getElementById("qr-timer").innerHTML = "Finished";
+          window.history.back();
         } else {
           document.getElementById("qr-timer").innerHTML = timeleft + "s";
         }
