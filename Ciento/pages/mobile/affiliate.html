@@ -76,50 +76,50 @@
                 <!--begin::Body-->
                 <div class="card-body pt-4 p-1">
                     <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-5">
+                    <div class="d-flex align-items-center overflow-hidden ripplelink p-4 w-100">
                         <!--begin::Text-->
                         <div class="d-flex flex-column font-weight-bold">
-                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Pizza 2X1 on tuesday</a>
+                            <a href="" class="text-dark text-hover-primary mb-1 font-size-lg">Pizza 2X1 on tuesday</a>
                             <span class="text-muted">3 Oct 2021</span>
                         </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-5">
+                    <div class="d-flex align-items-center overflow-hidden ripplelink p-4 w-100">
                         <!--begin::Text-->
                         <div class="d-flex flex-column font-weight-bold">
-                            <a href="#" class="text-dark-75 text-hover-primary mb-1 font-size-lg">Pasta 3X1 on tuesday</a>
+                            <a href="" class="text-dark-75 text-hover-primary mb-1 font-size-lg">Pasta 3X1 on tuesday</a>
                             <span class="text-muted">3 Oct 2021</span>
                         </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-5">
+                    <div class="d-flex align-items-center overflow-hidden ripplelink p-4 w-100">
                         <!--begin::Text-->
                         <div class="d-flex flex-column font-weight-bold">
-                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Burger 5 on 1 everyday</a>
+                            <a href="" class="text-dark text-hover-primary mb-1 font-size-lg">Burger 5 on 1 everyday</a>
                             <span class="text-muted">4 Oct 2021</span>
                         </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-5">
+                    <div class="d-flex align-items-center overflow-hidden ripplelink p-4 w-100">
                         <!--begin::Text-->
                         <div class="d-flex flex-column font-weight-bold">
-                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Burger 5 on 1 everyday</a>
+                            <a href="" class="text-dark text-hover-primary mb-1 font-size-lg">Burger 5 on 1 everyday</a>
                             <span class="text-muted">3 Oct 2021</span>
                         </div>
                         <!--end::Text-->
                     </div>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <div class="d-flex align-items-center mb-2">
+                    <div class="d-flex align-items-center mb-2 overflow-hidden ripplelink p-4 w-100">
                         <!--begin::Text-->
                         <div class="d-flex flex-column font-weight-bold">
-                            <a href="#" class="text-dark text-hover-primary mb-1 font-size-lg">Pizza 2X1 on tuesday</a>
+                            <a href="" class="text-dark text-hover-primary mb-1 font-size-lg">Pizza 2X1 on tuesday</a>
                             <span class="text-muted">4 Oct 2021</span>
                         </div>
                         <!--end::Text-->
@@ -131,7 +131,7 @@
             <!--end::List Widget 1-->
             <div class="row">
                 <div class="col-4 p-1">
-                        <img src="../../assets/media/ciento/ivan-stern-LOLSb7m6XkU-unsplash.jpg" alt="" class="img-fluid rounded">
+                        <img src="../../assets/media/ciento/ivan-stern-LOLSb7m6XkU-unsplash.jpg" alt="" class="img-fluid rounded overflow-hidden ripplelink">
                 </div>
                 <div class="col-4 p-1">
                         <img src="../../assets/media/ciento/jana-sabeth-k6w8miMpfUI-unsplash.jpg" alt="" class="img-fluid rounded">
@@ -161,5 +161,31 @@
             </div>
     </div>
 </div>
+    <script>
+         // Click effects
+         var links = document.querySelectorAll('.ripplelink');
+
+        for (var i = 0, len = links.length; i < len; i++) {
+        links[i].addEventListener('click', function(e) {
+            var targetEl = e.target;
+            var inkEl = targetEl.querySelector('.ink');
+
+            if (inkEl) {
+            inkEl.classList.remove('animate');
+            }
+            else {
+            inkEl = document.createElement('span');
+            inkEl.classList.add('ink');
+            inkEl.style.width = inkEl.style.height = Math.max(targetEl.offsetWidth, targetEl.offsetHeight) + 'px';
+            targetEl.appendChild(inkEl);
+            }
+
+            inkEl.style.left = (e.offsetX - inkEl.offsetWidth / 2) + 'px';
+            inkEl.style.top = (e.offsetY - inkEl.offsetHeight / 2) + 'px';
+            inkEl.classList.add('animate');
+        }, false);
+        }
+
+    </script>
     </body>
 </html>

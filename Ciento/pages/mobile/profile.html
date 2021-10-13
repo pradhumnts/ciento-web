@@ -78,11 +78,11 @@
     </div>
     </div>
     <div class="container px-3">
-    <div class="card card-custom card-stretch gutter-b pt-8 mt-5 rounded-section">
+    <div class="card card-custom card-stretch gutter-b p-0 mt-5 rounded-section">
         <!--begin::Body-->
-        <div class="card-body pt-2 pb-0 px-6">
+        <div class="card-body p-0 pt-4">
             <!--begin::Item-->
-            <div class="d-flex align-items-center mb-7">
+            <div class="d-flex align-items-center overflow-hidden ripplelink py-3 px-8">
                 <!--begin::Symbol-->
                 <div class="symbol symbol-40 mr-5">
                     <span class="symbol-label">
@@ -101,7 +101,7 @@
             </div>
             <!--end::Item-->
             <!--begin::Item-->
-            <div class="d-flex align-items-center mb-7">
+            <div class="d-flex align-items-center overflow-hidden ripplelink py-3 px-8">
                 <!--begin::Symbol-->
                 <div class="symbol symbol-40 symbol-light mr-5">
                     <span class="symbol-label">
@@ -120,7 +120,7 @@
             </div>
             <!--end::Item-->
             <!--begin::Item-->
-            <div class="d-flex align-items-center mb-7">
+            <div class="d-flex align-items-center overflow-hidden ripplelink py-3 px-8">
                 <!--begin::Symbol-->
                 <div class="symbol symbol-40 symbol-light mr-5">
                     <span class="symbol-label">
@@ -139,7 +139,7 @@
             </div>
             <!--end::Item-->
             <!--begin::Item-->
-            <div class="d-flex align-items-center mb-7">
+            <div class="d-flex align-items-center overflow-hidden ripplelink py-3 px-8">
                 <!--begin::Symbol-->
                 <div class="symbol symbol-40 symbol-light mr-5">
                     <span class="symbol-label">
@@ -159,7 +159,7 @@
             </div>
             <!--end::Item-->
             <hr>
-            <div class="copywrite">
+            <div class="copywrite px-10 pt-4">
                 <h1 class="font-weight-bolder">Ciento</h1>
                 <p>Your Private Membership</p>
             </div>
@@ -169,6 +169,36 @@
     </div>
     </div>
     <script>
+       
+        // Click effects
+        var links = document.querySelectorAll('.ripplelink');
+
+        for (var i = 0, len = links.length; i < len; i++) {
+        links[i].addEventListener('click', function(e) {
+            var targetEl = e.target;
+            var inkEl = targetEl.querySelector('.ink');
+
+            if (inkEl) {
+            inkEl.classList.remove('animate');
+            }
+            else {
+            inkEl = document.createElement('span');
+            inkEl.classList.add('ink');
+            inkEl.style.width = inkEl.style.height = Math.max(targetEl.offsetWidth, targetEl.offsetHeight) + 'px';
+            targetEl.appendChild(inkEl);
+            }
+
+            inkEl.style.left = (e.offsetX - inkEl.offsetWidth / 2) + 'px';
+            inkEl.style.top = (e.offsetY - inkEl.offsetHeight / 2) + 'px';
+            inkEl.classList.add('animate');
+        }, false);
+        }
+                $(document).ready(function(){
+                    $(".affiliate-page").click(function(){
+                        window.location = $(".affiliate-page").data("location")
+                    });
+                });
+    
         $(document).ready(function(){
            
              $(".link-membership").click(function(){
