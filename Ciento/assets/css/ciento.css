@@ -78,6 +78,7 @@ body{
     grid-auto-columns: 15% 70% 15%;
     align-items:center;
     justify-content: center;
+    z-index:100;
 }
 .navigation-secondary i{
      color: #282F40 !important;
@@ -199,3 +200,4 @@ body{
   @keyframes ripple {
       100% {opacity: 0; transform: scale(2.5);}
   }
+  
