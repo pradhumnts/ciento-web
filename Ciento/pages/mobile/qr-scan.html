@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,33 +12,37 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="icon" type="image/png" href="../../assets/media/Ciento_R3 yellow.png"/>
+    <link rel="icon" type="image/png" href="{% static 'assets/media/Ciento_R3 yellow.png' %}"/>
 
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
     />
     <!--end::Page Vendors Styles-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
 
     <!--begin::Global Theme Styles(used by all pages)-->
     <link
-      href="../../assets/plugins/global/plugins.bundle.css"
+      href="{% static 'assets/plugins/global/plugins.bundle.css' %}"
       rel="stylesheet"
       type="text/css"
     />
+  
+    <link href="{% static 'assets/css/style.bundle.css' %}" rel="stylesheet" type="text/css" />
     <link
-      href="../../assets/plugins/custom/prismjs/prismjs.bundle.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript" src="instascan.min.js"></script>
-    <link href="../../assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    href="{% static 'assets/plugins/custom/prismjs/prismjs.bundle.css' %}"
+    rel="stylesheet"
+    type="text/css"
+  />
     <!-- <script src="../../assets/js/scripts.bundle.js"></script> -->
-    <link rel="stylesheet" href="../../assets/css/ciento.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/ciento.css' %}" />
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   
     <!--end::Global Theme Styles-->
-    <link rel="stylesheet" href="../../assets/js/instascan.min.js" />
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    
+    <!-- <link rel="stylesheet" href="{% static 'assets/js/instascan.min.js' %}" /> -->
+    <!--end::Global Theme Styles-->
   </head>
   <body id="kt_body" class="page-loading">
     <!-- <div class="loading-wrapper">
@@ -57,19 +62,23 @@
           <a href="#" onclick="window.history.back()"><button class="btn btn-light font-weight-bold text-primary my-10 opacity-50">Cancel Scanning</button></a>
         </div>
         </div> 
-        <img src="../../assets/media/QR/qr-overlay.png" class="qr-svg" alt="">
+        <img src="{% static 'assets/media/QR/qr-overlay.png' %}" class="qr-svg" alt="">
           <!-- <svg class="qr-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 427.998 926.003">
             <path id="Subtraction_1" data-name="Subtraction 1" d="M-19177,1789h-428l0-926h428v926h0v0Zm-349-644a20.02,20.02,0,0,0-19.994,20v271a20.02,20.02,0,0,0,19.994,20h271a20.024,20.024,0,0,0,20-20V1165a20.024,20.024,0,0,0-20-20Z" transform="translate(19605 -862.999)" opacity="0.66"/>
           </svg> -->
-          
-      </div>
+        </div>
+        <div class="camera-icon position-absolute">
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="flashlight" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-flashlight fa-w-20 fa-3x text-white"><path fill="currentColor" d="M384 160H32a32 32 0 0 0-32 32v128a32 32 0 0 0 32 32h352l16.12 10.75c43.14 28.76 92.62 45.67 143.88 50.89V98.36c-51.26 5.22-100.74 22.13-143.88 50.89zm-96 128h-32a32 32 0 0 1 0-64h32a32 32 0 0 1 0 64zM608 96h-32v320h32a32 32 0 0 0 32-32V128a32 32 0 0 0-32-32z" class=""></path></svg>
+          <i class="fas fa-camera text-white"></i>
+         
+        </div>
      
       <div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
         <label class="btn btn-primary active">
           <input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
         </label>
         <label class="btn btn-secondary">
-          <input type="radio" name="options" value="2" autocomplete="off"> Back Camera
+          <input type="radio" name="options" value="2" autocomplete="off">Back Camera
         </label>
       </div>
     <script type="text/javascript">
@@ -110,17 +119,17 @@
         alert(e);
       });
 
-      // qr timer
-      var timeleft = 15;
-      var downloadTimer = setInterval(function(){
-        if(timeleft <= 0){
-          clearInterval(downloadTimer);
-          window.history.back();
-        } else {
-          document.getElementById("qr-timer").innerHTML = timeleft + "s";
-        }
-        timeleft -= 1;
-      }, 1000);
+      // // qr timer
+      // var timeleft = 15;
+      // var downloadTimer = setInterval(function(){
+      //   if(timeleft <= 0){
+      //     clearInterval(downloadTimer);
+      //     window.history.back();
+      //   } else {
+      //     document.getElementById("qr-timer").innerHTML = timeleft + "s";
+      //   }
+      //   timeleft -= 1;
+      // }, 1000);
     </script>
    
 </body>
